@@ -17,7 +17,7 @@ var app = express();
 app.set("trust proxy", 1);
 app.use(
   session({
-    secret: "keyboard cat",
+    secret: "flying-turtles",
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false },
