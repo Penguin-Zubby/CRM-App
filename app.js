@@ -11,6 +11,7 @@ var loginRouter = require("./routes/loginRoute");
 var registerRouter = require("./routes/registerRoute");
 var resetPassRouter = require("./routes/resetPassRoute");
 var adminRouter = require("./routes/adminRoute");
+var legalsRouter = require("./routes/legalRoute");
 
 var app = express();
 app.set("trust proxy", 1);
@@ -38,6 +39,7 @@ app.use("/login", loginRouter);
 app.use("/register", registerRouter);
 app.use("/resetPassword", resetPassRouter);
 app.use("/admin", adminRouter);
+app.use("/legals", legalsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
