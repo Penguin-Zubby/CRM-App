@@ -4,6 +4,9 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const session = require("express-session");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -12,6 +15,7 @@ var registerRouter = require("./routes/registerRoute");
 var resetPassRouter = require("./routes/resetPassRoute");
 var adminRouter = require("./routes/adminRoute");
 var legalsRouter = require("./routes/legalRoute");
+const connectdb = require("./mongoDB/mongodb");
 
 var app = express();
 app.set("trust proxy", 1);
@@ -23,6 +27,9 @@ app.use(
     cookie: { secure: false },
   })
 );
+//Moogoose Database connection
+connectdb();
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
