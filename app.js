@@ -19,6 +19,7 @@ var dashboardRouter = require("./routes/dashboardRoute");
 var registerComRouter = require("./routes/registerComRoute");
 var employeeRouter = require("./routes/employeeRoute");
 var addEmployeeRouter = require("./routes/addEmployeesRoute");
+var update_EmployeeRouter = require("./routes/update_EmployeeRoute");
 const connectdb = require("./mongoDB/mongodb");
 
 var app = express();
@@ -55,6 +56,7 @@ app.use("/registerCom", registerComRouter);
 app.use("/employee", employeeRouter);
 app.use("/dashboard", dashboardRouter);
 app.use("/addEmployee", addEmployeeRouter);
+app.use("/update_Employee", update_EmployeeRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
