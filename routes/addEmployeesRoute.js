@@ -3,6 +3,6 @@ var router = express.Router();
 var services = require("../services/render");
 
 /* Add new employee details */
-router.get("/",services.add_employee);
+router.get("/",services.addEmployee);
 
 module.exports = router;
