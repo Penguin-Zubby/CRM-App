@@ -15,6 +15,7 @@ var registerRouter = require("./routes/registerRoute");
 var resetPassRouter = require("./routes/resetPassRoute");
 var adminRouter = require("./routes/adminRoute");
 var legalsRouter = require("./routes/legalRoute");
+var registerComRouter = require("./routes/registerComRoute");
 const connectdb = require("./mongoDB/mongodb");
 
 var app = express();
@@ -47,6 +48,7 @@ app.use("/register", registerRouter);
 app.use("/resetPassword", resetPassRouter);
 app.use("/admin", adminRouter);
 app.use("/legals", legalsRouter);
+app.use("/registerCom", registerComRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
