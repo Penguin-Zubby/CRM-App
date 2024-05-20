@@ -11,7 +11,7 @@ const schema = new mongoose.Schema({
         unique:true
     },
     phone:{
-        type:Integer,
+        type:Number,
         required:true
     },
     address:{
@@ -22,6 +22,6 @@ const schema = new mongoose.Schema({
     status:String
 })
 
-const UserDB = mongoose.model("userdb".schema);
+const UserDB = mongoose.model("userdb",schema);
 
 module.exports = UserDB;
