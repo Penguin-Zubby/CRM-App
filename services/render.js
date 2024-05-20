@@ -1,6 +1,6 @@
 
 exports.homeRoutes = (req, res)=>{
-    res.render("index", { title: "CRM Cystem" });
+    res.render("index", { title: "CRM System" });
 }
 
 exports.update_Employee = (req, res)=>{
