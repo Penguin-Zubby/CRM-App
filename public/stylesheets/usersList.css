@@ -108,7 +108,12 @@ table{
 #add_employee .form-group .radio{
     margin: 1em 2em;
 }
-.radio input[type="radio"]{
+
+
+
+/*Extra styling of the radio element/ class */
+
+.radio input[type='radio']{
     position: absolute;
     opacity: 0;
 }
@@ -144,8 +149,45 @@ table{
     box-shadow: inset 0 0 0 4px #e7c0e7;
     border-color: #e9ecef;
     background: #2d2331;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
 }
 
+.radio input[type='radio']:checked + .radio-label:before{
+    background-color: #e7c0e7;
+    box-shadow: inset 0 0 0 4px #fff;
+}
+
+.radio input[type='radio']:focus + .radio-label:before{
+    outline: none;
+    border-color: #e7c0e7;
+}
+
+.radio input[type='radio']:disabled + .radio-label:before{
+    box-shadow: inset 0 0 0 4px #fff;
+    border-color: #e9ecef;
+    background: #dcd7d7;
+}
+
+#update_Employee .form-group .btn,
+#add_employee .form-group .btn{
+    width: 100%;
+    padding: .9em 1em;
+    background-color: #e9c4f8;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: .2em;
+    margin: .5em 0;
+}
+
+#update_Employee .form-group .btn:hover,
+#add_employee .form-group .btn:hover{
+    background-color: #e9ecef;
+    color: #e9c4f8;
+
+}
 
 /*Media queries*/
 @media only screen and(max-width: 1024px){
